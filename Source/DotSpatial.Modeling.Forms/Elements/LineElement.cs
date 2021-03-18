@@ -31,15 +31,15 @@ namespace DotSpatial.Modeling.Forms.Elements
         /// <param name="dataSets">An array of available data</param>
         public LineElement(LineFeatureSetParam inputParam, List<DataSetArray> dataSets)
         {
-            // Needed by the designer
+            // Tasarımcı tarafından gerekli
             InitializeComponent();
 
-            // We save the parameters passed in
+            // Geçtiğimiz parametreleri kaydediyoruz
             Param = inputParam;
 
             _dataSets = dataSets;
 
-            // Saves the label
+            // Etiketi kaydeder
             GroupBox.Text = Param.Name;
 
             DoRefresh();
@@ -50,7 +50,7 @@ namespace DotSpatial.Modeling.Forms.Elements
         #region Methods
 
         /// <summary>
-        /// updates the param if something's been changed
+        /// bir şey değiştirildiyse parametreyi günceller
         /// </summary>
         public override void Refresh()
         {
@@ -106,10 +106,10 @@ namespace DotSpatial.Modeling.Forms.Elements
 
         private void DoRefresh()
         {
-            // Disable the combo box temporarily
+            // Birleşik giriş kutusunu geçici olarak devre dışı bırakın
             _refreshCombo = false;
 
-            // We set the combo boxes status to empty to start
+            // Başlamak için açılan kutuların durumunu boş olarak ayarladık
             Status = ToolStatus.Empty;
             LightTipText = ModelingMessageStrings.FeaturesetMissing;
             comboFeatures.Items.Clear();
