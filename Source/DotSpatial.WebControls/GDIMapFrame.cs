@@ -308,7 +308,7 @@ namespace DotSpatial.WebControls
 
                 if (geoLayer.IsVisible == false) return;
 
-                geoLayer.DrawRegions(args, new List<Extent> { args.GeographicExtents });
+                geoLayer.DrawRegions(args, new List<Extent> { args.GeographicExtents },false);
 
                 IMapFeatureLayer mfl = geoLayer as IMapFeatureLayer;
                 if (mfl != null)
@@ -323,7 +323,7 @@ namespace DotSpatial.WebControls
                         {
                             if (ViewExtents.Width > mfl.LabelLayer.DynamicVisibilityWidth) return;
                         }
-                        mfl.LabelLayer.DrawRegions(args, new List<Extent> { args.GeographicExtents });
+                        mfl.LabelLayer.DrawRegions(args, new List<Extent> { args.GeographicExtents },false);
                     }
                 }
             }

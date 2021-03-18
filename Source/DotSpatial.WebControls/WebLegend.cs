@@ -129,7 +129,7 @@ namespace DotSpatial.WebControls
             Bitmap b = new Bitmap(sz.Width+1, sz.Height+1);
             Graphics g = Graphics.FromImage(b);
 
-            li.LegendSymbol_Painted(g,new Rectangle(0,0,sz.Width,sz.Height));
+            li.LegendSymbolPainted(g,new Rectangle(0,0,sz.Width,sz.Height));
 
             string name = Guid.NewGuid().ToString();
 

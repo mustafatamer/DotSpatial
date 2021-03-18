@@ -6,18 +6,18 @@ namespace CodeSnippets
     public class BufferExamples
     {
         /// <summary>
-        /// This code demonstrates how to open an existing shapefile as a new feature set, buffer the features and then save them to a different file.
+        /// Bu kod, mevcut bir şekil dosyasının yeni bir özellik kümesi olarak nasıl açılacağını, özellikleri arabelleğe almayı ve ardından farklı bir dosyaya kaydetmeyi gösterir.
         /// </summary>
         /// <param name="fileName">Path of your shapefile (e.g. C:\myShapefile.shp).</param>
         public static void BufferFeatures(string fileName)
         {
-            // Pass in the file path of the shapefile that will be opened
+            // Açılacak şekil dosyasının dosya yolunu iletin
             IFeatureSet fs = FeatureSet.Open(@"C:\[Your File Path]\Municipalities.shp");
          
-            // Buffer the features of the feature set "fs"
+            // "fs" özellik kümesinin özelliklerini arabelleğe alın
             IFeatureSet bs = fs.Buffer(10, true);
             
-            // Saves the buffered feature set as a new file
+            //Arabelleğe alınan özellik kümesini yeni bir dosya olarak kaydeder
             bs.SaveAs(@"C:\[Your File Path]\Municipalities_Buffer.shp", true);
         }
 

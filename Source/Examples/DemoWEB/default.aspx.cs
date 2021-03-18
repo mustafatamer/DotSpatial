@@ -5,6 +5,7 @@ using DotSpatial.Data;
 using DotSpatial.Controls;
 using DotSpatial.Symbology;
 using System.Drawing;
+using System.Net;
 
 namespace DemoWEB
 {
@@ -14,6 +15,7 @@ namespace DemoWEB
         {
             if (!IsPostBack)
             {
+                ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
                 CreateMap();
 
                 WebToolBar1.WebMapID = "WebMap1";

@@ -735,7 +735,7 @@ namespace DotSpatial.WebControls
 
                             Envelope mapEnv;
 
-                            m.Layers.SelectedLayer.ClearSelection(out mapEnv);
+                            m.Layers.SelectedLayer.ClearSelection(out mapEnv,false);
 
 
                             m.Layers.SelectedLayer.ClearSelection();
@@ -743,7 +743,7 @@ namespace DotSpatial.WebControls
                             Envelope affectedarea = null;
 
                             //                                m.Layers.SelectedLayer.Select(m.ViewExtents.ToEnvelope(), ex.ToEnvelope(), Symbology.SelectionMode.IntersectsExtent, out affectedarea);
-                            m.Layers.SelectedLayer.Select(ex.ToEnvelope(), ex.ToEnvelope(), SelectionMode.Intersects, out affectedarea);
+                            m.Layers.SelectedLayer.Select(ex.ToEnvelope(), ex.ToEnvelope(), SelectionMode.Intersects, out affectedarea,ClearStates.False);
 
                             _returnCommand = "STRUCTURE";
 

@@ -8,9 +8,9 @@ using DotSpatial.Controls.Header;
 namespace DotSpatial.Examples.AppManagerCustomizationRuntime.AppManagerRequirements
 {
     /// <summary>
-    /// Simple implmenentation of IStatusControl.
-    /// It shows a technique how to create own status control as extension.
-    /// You may delete this class in your application. In this case default status control will be used.
+    /// IStatus Kontrolünün basit uygulaması.
+    /// Uzantı olarak kendi durum kontrolünün nasıl oluşturulacağı bir teknik gösterir.
+    /// Bu sınıfı uygulamanızda silebilirsiniz. Bu durumda, varsayılan durum kontrolü kullanılacaktır.
     /// </summary>
     internal class StatusControl: IStatusControl, IPartImportsSatisfiedNotification
     {
